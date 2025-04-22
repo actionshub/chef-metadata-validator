@@ -1,23 +1,20 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: chef-metadata-validator
+description:
+  An action to check if the chef `metadata.rb` file's `version` has been updated
+author: ActionsHub
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
   icon: heart
   color: red
 
-# Define your inputs here.
-inputs:
-  milliseconds:
-    description: Your input description here
-    required: true
-    default: '1000'
-
 # Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  default_branch_version:
+    description: The version of the cookbook according to the default branch
+  current_version:
+    description: The version of the cookbook according to the current branch
+  updated:
+    description: boolean, true if the version was updated
 
 runs:
   using: node20
