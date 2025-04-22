@@ -17,6 +17,13 @@
     "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "ES2022"
-  }
+    "target": "ES2022",
+    "baseUrl": ".",
+    "types": ["node", "jest"],
+    "paths": {
+      "@validator/*": ["./src/*.ts"]
+    },
+    "allowImportingTsExtensions": true // VERY IMPORTANT
+  },
+  "include": ["./src/**/*", "./packages/**/*"]
 }
